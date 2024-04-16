@@ -1,0 +1,132 @@
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 85px 32px; /* 5.66em 2.13em */
+  background-color: hsl(0, 0%, 98%);
+  min-width: 375px;
+  overflow: auto;
+}
+
+/* HEADER */
+.page-header {
+  margin-block-end: 5em;
+  /* background-color: orange; */
+}
+
+.page-header .page-title,
+.page-header .page-subtitle {
+  font-weight: 200;
+  font-size: 2.4rem;
+  letter-spacing: 0.17px;
+  color: hsl(234, 12%, 34%);
+  margin-block-end: 0px;
+}
+
+.page-header .page-subtitle {
+  font-weight: 600;
+  margin-block-end: 1em;
+}
+
+.page-header .flavor-text {
+  line-height: 2;
+  letter-spacing: 0.1px;
+  color: hsl(234, 12%, 34%, 0.5);
+}
+
+@media (min-width: 960px) {
+  .page-header .flavor-text {
+    max-inline-size: 37.5%; /* 540px */
+    margin: auto;
+  }
+}
+
+/* TODO! ADD RESPONSIVE OVERRIDES */
+
+/* CARDS */
+.feature-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em; /* 25px */
+  /* outline: 1px solid red; */
+}
+
+.feature-col {
+  /* outline: 1px solid blue; */
+  display: flex;
+  flex-direction: column;
+  gap: 1.6em; /* 25px */
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .feature-wrapper {
+    flex-direction: row;
+    justify-content: center; /* ADDED THIS */
+    inline-size: 80%; /* 1110px */
+    margin: auto;
+    gap: 2em;
+  }
+  .feature-col {
+    justify-content: center;
+    width: calc(33.33% - calc(30px / 3));
+    max-width: 35rem;
+    gap: 2em;
+  }
+}
+
+.card {
+  /* outline: 1px solid green; */
+  /* background-color: hsl(120, 100%, 50%, 0.2); */
+  padding: calc(2em - 4px) 2em 2em;
+  text-align: left;
+  text-align: inline-start;
+  border-block-start: 4px solid transparent;
+  border-radius: 8px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  
+  /* ADDED THESE */
+  max-width: 35rem; /* 350px */
+  min-width: 16rem;
+}
+
+.card.supervisor {
+  border-block-start-color: hsl(180, 62%, 55%);
+}
+.card.team-builder {
+  border-block-start-color: hsl(0, 78%, 62%);
+}
+.card.karma {
+  border-block-start-color: hsl(34, 97%, 64%);
+}
+.card.calculator {
+  border-block-start-color: hsl(212, 86%, 64%);
+}
+
+.card .card-title {
+  font-weight: 600;
+  font-size: 2rem;
+  color: hsl(234, 12%, 34%);
+  margin-block-end: 0;
+}
+
+.card .card-text {
+  font-size: 1.3rem;
+  line-height: 1.77;
+  letter-spacing: 0.09px;
+  color: hsl(229, 6%, 66%, 0.5);
+  margin-block-end: 2em;
+}
+
+.card .icon-holder {
+  display: flex;
+  justify-content: end;
+}
+
+@media  (max-width: 959px) {
+  .card .icon {
+    block-size: 57px;
+    inline-size: 57px;
+  }
+}
